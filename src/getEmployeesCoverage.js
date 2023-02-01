@@ -1,4 +1,4 @@
-const { employees, species } = require('../data/zoo_data');
+const { employees } = require('../data/zoo_data');
 
 const getEmployeesCoverage = (responsible) => {
   const findEmployee = employees.filter((employee) => employee.firstName === responsible.name
