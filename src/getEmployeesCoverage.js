@@ -1,11 +1,31 @@
-const { employees } = require('../data/zoo_data');
+const { employees, species } = require('../data/zoo_data');
+
+const verifyEmployees = employees.map((employee) => {
+  const array = {
+    id: employee.id,
+    fullName: `${employee.firstName} ${employee.lastName}`,
+    species: employee.responsibleFor.map((id) => species
+      .find((specie) => specie.id === id).name),
+    locations: employee.responsibleFor.map((id) => species
+      .find((specie) => specie.id === id).location),
+  };
+  return array;
+});
 
 const getEmployeesCoverage = (responsible) => {
-  const findEmployee = employees.filter((employee) => employee.firstName === responsible.name
-  || employee.lastName === responsible.name || employee.id === responsible.id);
+  if (responsible === undefined) {
+    return verifyEmployees;
+  }
 
-  return findEmployee;
+  const result = verifyEmployees.find((element) => element.fullName
+    .includes(Object.values(responsible))
+  || element.id.includes(Object.values(responsible)));
+
+  if (!result) {
+    throw new Error('Informações inválidas');
+  }
+
+  return result;
 };
-console.log(getEmployeesCoverage({ name: 'Sharonda' }));
 
 module.exports = getEmployeesCoverage;
