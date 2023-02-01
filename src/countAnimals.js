@@ -1,6 +1,6 @@
 const data = require('../data/zoo_data');
 
-const qtdAnimaisResidentes = (animal) => data.species
+const amountAnimals = (animal) => data.species
   .reduce((sum, spec) => ((spec.name === animal.species)
     ? (spec.residents) : (sum)), 0).length;
 
@@ -13,7 +13,7 @@ const countAnimals = (animal) => {
   }
 
   if (Object.values(animal).length === 1) {
-    return qtdAnimaisResidentes(animal);
+    return amountAnimals(animal);
   }
   return data.species.find((specie) => specie.name === animal.species).residents
     .reduce((acc, sexo) => ((sexo.sex === animal.sex) ? (acc + 1) : (acc)), 0);
