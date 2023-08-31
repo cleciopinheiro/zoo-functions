@@ -25,7 +25,7 @@ O projeto foi desenvolvido utilizando HTML, CSS e JavaScript. Os testes foram de
 
 Para executar o projeto faça o clone deste repositório usando o comando abaixo.
 
-    git clone git@github.com:larissaperinoto/todo-list.git
+    git clone git@github.com:cleciopinheiro/zoo-functions.git
 
 Após o clone, instale as dependências do projeto com o comando abaixo.
 
