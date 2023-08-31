@@ -45,4 +45,4 @@ Rode os testes com o seguinte comando.
     
  ---
  
-Desenvolvido por [Clécio Pinheiro]([www.linkedin.com/in/cleciopinheirodev](https://www.linkedin.com/in/cleciopinheirodev/)https://www.linkedin.com/in/cleciopinheirodev/), © 2022.
+Desenvolvido por [Clécio Pinheiro](https://www.linkedin.com/in/cleciopinheirodev/), © 2023.
